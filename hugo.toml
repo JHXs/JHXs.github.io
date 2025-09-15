@@ -1,6 +1,6 @@
 baseURL = 'https://jhxs.github.io/'
 languageCode = 'zh-cn'
-title = 'My New Hugo Site'
+title = 'hansel 的个人垃圾站'
 theme = 'PaperMod'
 
 [params]
