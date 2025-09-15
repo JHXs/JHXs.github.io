@@ -3,8 +3,8 @@ tags:
   - "#MJJ"
   - "#blog"
   - "#hugo"
-  - blog
   - MJJ
+  - blog
   - hugo
 created: 2025-09-15T11:31:00
 title: Hugo
@@ -13,7 +13,7 @@ slug: 17:06
 share: true
 description: 学习使用hugo搭建个人博客
 series: Hugo
-lastmod: 2025-09-15T17:07:00
+lastmod: 2025-09-15T19:37:00
 author: hansel
 dir: posts
 cover:
