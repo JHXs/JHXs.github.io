@@ -1,4 +1,4 @@
-baseURL = 'https://jhxs.github.io/my-hugo-blog/'
+baseURL = 'https://jhxs.github.io/'
 languageCode = 'zh-cn'
 title = 'My New Hugo Site'
 theme = 'PaperMod'
