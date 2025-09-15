@@ -1,5 +1,10 @@
 baseURL: 'https://jhxs.github.io/'
-languageCode: 'zh-cn'
+defaultContentLanguage: zh        # 主语言
+languages:
+  zh:
+    languageName: 中文
+    languageCode: zh-cn
+    weight: 1
 title: 'hansel 的垃圾站'
 theme: 'PaperMod'
 pagination:
@@ -27,6 +32,7 @@ outputs:
     - JSON
 
 params:
+  DateFormat: "2006年01月02日"
   defaultTheme: "auto"
   homeInfoParams:
     Title: "你好，我是 hansel "
@@ -37,8 +43,8 @@ menu:
     - name: "个人"
       url: "/posts"
       weight: 1
-    - name: "日记"
-      url: "/journal"
+    - name: "归档"
+      url: "/archives"
       weight: 2
     - name: "学习"
       url: "/study"
