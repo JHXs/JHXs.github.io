@@ -10,8 +10,8 @@ tags:
 slug: 19:04
 share: true
 description: vscode
-series: 系列
-lastmod: 2025-09-15T19:04:00
+series: 软件记录
+lastmod: 2025-09-15T19:10:00
 author: hansel
 dir: posts
 cover:
