@@ -1,0 +1,22 @@
+baseURL: 'https://jhxs.github.io/'
+languageCode: 'zh-cn'
+title: 'hansel 的垃圾站'
+theme: 'PaperMod'
+
+params:
+  defaultTheme: "auto"
+  homeInfoParams:
+    Title: "你好，我是 hansel "
+    Content: "欢迎来到我的博客主页 "
+
+menu:
+  main:
+    - name: "个人"
+      url: "/posts"
+      weight: 1
+    - name: "日记"
+      url: "/journal"
+      weight: 2
+    - name: "学习"
+      url: "/study"
+      weight: 3
