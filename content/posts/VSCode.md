@@ -7,15 +7,16 @@ tags:
   - Utility
   - "#vscode"
   - vscode
-slug: 19:04
+slug: 21:36
 share: true
-description: vscode
-series: 软件记录
+description: ""
+series:
 lastmod: 2025-09-15T19:10:00
 author: hansel
 dir: posts
 cover:
   image: ""
+toc: true
 ---
 # 配置C环境
 
