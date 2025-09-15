@@ -25,3 +25,4 @@ cover:
 > - Auto link title
 > - Enveloppe —— 将 Obsidian 中的文章和本地附件上传到 Github 仓库，上传前可以指定文件目录、自定义内容替换等操作。
 
+![image-1.png](/images/image-1.png)
