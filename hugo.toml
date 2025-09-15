@@ -7,8 +7,8 @@ theme = 'PaperMod'
   defaultTheme = "auto"
   # 这里 homeInfoParams 下注意不要换行，否则 hugo server可能打开不了（复制时候删除这行注释）
 [params.homeInfoParams]
-    Title = "你好，我是 hansel "
-    Content = "欢迎来到我的博客主页 "
+  Title = "你好，我是 hansel "
+  Content = "欢迎来到我的博客主页 "
 
 [[menu.main]]
   name = "个人"
