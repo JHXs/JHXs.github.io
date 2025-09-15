@@ -19,15 +19,16 @@ dir: posts
 cover:
   image: ""
 ---
-# 准备
+# 手动部署
+## 准备
 
-## 安装软件
+### 安装软件
 
 ```bash
 sudo pacman -Sy --needed hugo git
 ```
 
-## **注册 GitHub 并创建仓库**
+### **注册 GitHub 并创建仓库**
 
 -  [Github 注册](https://github.com)
 - 创建一个**与你用户名相同的仓库**，比如:
@@ -36,9 +37,9 @@ sudo pacman -Sy --needed hugo git
 <Github用户名>.github.io
 ```
 
-# Hugo 博客项目
+## Hugo 博客项目
 
-## 创建源代码
+### 创建源代码
 
 在本地找个位置存储 **源代码**
 
@@ -56,7 +57,7 @@ hugo new site <你的文件夹名>
 cd <你的文件夹名>
 ```
 
-## 添加主题
+### 添加主题
 
 > (此处使用 **主题** - **PaperMod** 作为例子)
 
@@ -73,45 +74,73 @@ git submodule add \\
 
 - 如果 **git submodule add** 不行，则可以网页浏览到 [PaperMod主页](https://github.com/adityatelange/hugo-PaperMod)点击 **<>Code** 下载 zip 文件，压缩文件将文件名改为 **PaperMod** 并复制粘贴到_**当前themes目录**_下即可。
 
-## **配置 hugo.toml**
+### **配置 hugo.toml**
 
 - 将下面代码复制粘贴到hugo.toml下。
 
 ```bash
-baseURL = 'https://<username>.github.io/'
-languageCode = 'zh-cn'
-title = '我的博客'
-theme = 'PaperMod'
+baseURL: 'https://<username>.github.io/'
+defaultContentLanguage: zh        # 主语言
+languages:
+  zh:
+    languageName: 中文
+    languageCode: zh-cn
+    weight: 1
+title: 'hansel 的垃圾站'
+theme: 'PaperMod'
+pagination:
+  pagerSize: 9 # 首页文章显示个数
+summaryLength: 999999 # 首页文章摘要字数
+hasCJKLanguage: true
+rssLimit: 10 # 限制 rss 输出的数量
 
-[params]
-  defaultTheme = "auto"
-  # 这里 homeInfoParams 下注意不要换行，否则 hugo server可能打开不了（复制时候删除这行注释）
-[params.homeInfoParams]
-    Title = "你好，我是 <username> "
-    Content = "欢迎来到我的博客主页：个人 / 博客 / 教程 "
+markup:
+  highlight:
+    noClasses: false
+    style: catppuccin-frappe
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2 # 从 h2 开始
+    endLevel: 3 # 到 h4 结束
+    ordered: false # 生成 ul 而不是 ol
 
-[[menu.main]]
-  name = "个人"
-  url = "/posts"
-  weight = 1
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
 
-[[menu.main]]
-  name = "教程"
-  url = "/docs"
-  weight = 2
+params:
+  showtoc: true   # 让文章页出现目录
+  tocopen: true   # 默认展开，false 则折叠
+  DateFormat: "2006年01月02日"
+  defaultTheme: "auto"
+  homeInfoParams:
+    Title: "你好，我是 hansel "
+    Content: "欢迎来到我的博客主页 "
 
-[[menu.main]]
-  name = "学习"
-  url = "/study"
-  weight = 3
+menu:
+  main:
+    - name: "个人"
+      url: "/posts"
+      weight: 1
+    - name: "归档"
+      url: "/archives"
+      weight: 2
+    - name: "学习"
+      url: "/study"
+      weight: 3
+
 ```
 
 - **baseURL**: 访问你个人网页的链接;
-- **url**: 链接的是当前目录下**content下的文件夹**;
+- **url**: 链接的是当前目录下**content下的文件/文件夹**;
 - **weight**: 表示网页部署位置
-- **后续视个人情况修改**
+- `params.showtoc` 和 `params.tocopen` 开启文章的目录
 
-# **写第一篇文章**
+## **写第一篇文章**
 
 ```bash
 # 在当前 根目录 下输入
@@ -140,7 +169,7 @@ title = 'Hello Hugo'
 这是我的第一篇文章！我正在学习 Hugo 😊
 ```
 
-# **本地预览网站 & 📁 构建 public/ 文件夹**
+## **本地预览网站 & 📁 构建 public/ 文件夹**
 
 ```bash
 # 当前根目录下输入
@@ -180,9 +209,9 @@ git push -f origin gh-pages
         - 目录：`/(root)`
     - 保存并等待 GitHub 自动生成网页（几分钟内）
 
-# **部署到 GitHub Pages（使用 Actions 自动部署）**
+## **部署到 GitHub Pages（使用 Actions 自动部署）**
 
-## **初始化 git 并推送到 GitHub**
+### **初始化 git 并推送到 GitHub**
 
 ```bash
 # 在根目录下
@@ -196,7 +225,7 @@ git push -u origin main
 
 > ⚠️ 如果你使用的是 HTTPS，请把 [git@github.com](mailto:git@github.com)… 改为 [`https://github.com/](<https://github.com/>)你的用户名/你的用户名.github.io.git`
 
-## **添加部署工作流**
+### **添加部署工作流**
 
 - 创建文件 (在根目录下) **`.github/workflows/deploy.yml`**：(注意 **`.github`** 的文件夹也是自己创建的)
 - 复制一下内容到 **`deploy.yml`** 下
@@ -235,7 +264,7 @@ jobs:
 > [!tip] 注意
 > - 必须给 `GITHUB_TOKEN` **写权限**（ Settings → Actions → General → Read and write permissions）。
 
-# **总结**
+## **总结**
 
 - 每次想新写内容直接
 
