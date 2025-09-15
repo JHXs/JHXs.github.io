@@ -1,0 +1,26 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-cn'
+title = 'My New Hugo Site'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+  # 这里 homeInfoParams 下注意不要换行，否则 hugo server可能打开不了（复制时候删除这行注释）
+[params.homeInfoParams]
+    Title = "你好，我是 hansel "
+    Content = "欢迎来到我的博客主页 "
+
+[[menu.main]]
+  name = "个人"
+  url = "/posts"
+  weight = 1
+
+[[menu.main]]
+  name = "日记"
+  url = "/journal"
+  weight = 2
+
+[[menu.main]]
+  name = "学习"
+  url = "/study"
+  weight = 3
