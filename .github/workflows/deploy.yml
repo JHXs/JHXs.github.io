@@ -1,20 +1,29 @@
-name: Deploy to GitHub Pages
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
-    branches: [main]
-
+    branches: [main] # 👈 每次推送到 main 分支就会自动部署
+    
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: true   # 主题若用 submodule 需拉取
           fetch-depth: 0
-      - uses: peaceiris/actions-hugo@v3
-      - run: hugo --minify
-      - uses: peaceiris/actions-gh-pages@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
+          extended: true
+
+      - name: Build Hugo site
+        run: hugo --minify
+        
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
