@@ -7,7 +7,7 @@ tags:
   - Utility
   - "#vscode"
   - vscode
-slug: 21:36
+slug: 21:51
 share: true
 description: ""
 series:
