@@ -29,7 +29,7 @@ sudo pacman -Sy --needed hugo git
 
 ## **注册 GitHub 并创建仓库**
 
--  [Github 注册:](https://github.com)
+-  [Github 注册](https://github.com)
 - 创建一个**与你用户名相同的仓库**，比如:
 
 ```bash
