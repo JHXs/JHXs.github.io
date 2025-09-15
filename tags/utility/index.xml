@@ -5,7 +5,7 @@
 &lt;li&gt;Image Converter&lt;/li&gt;
 &lt;li&gt;Auto link title&lt;/li&gt;
 &lt;li&gt;Enveloppe —— 将 Obsidian 中的文章和本地附件上传到 Github 仓库，上传前可以指定文件目录、自定义内容替换等操作。&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;</description></item><item><title>VSCode</title><link>https://jhxs.github.io/posts/2136/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/2136/</guid><description>&lt;h1 id="配置c环境"&gt;配置C环境&lt;/h1&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;</description></item><item><title>VSCode</title><link>https://jhxs.github.io/posts/2151/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/2151/</guid><description>&lt;h1 id="配置c环境"&gt;配置C环境&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!important] &lt;a href="https://www.cnblogs.com/duruofei/p/15674502.html"&gt;https://www.cnblogs.com/duruofei/p/15674502.html&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id="安装mingw"&gt;安装Mingw&lt;/h2&gt;
