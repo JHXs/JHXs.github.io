@@ -32,6 +32,8 @@ outputs:
     - JSON
 
 params:
+  showtoc: true   # 让文章页出现目录
+  tocopen: true   # 默认展开，false 则折叠
   DateFormat: "2006年01月02日"
   defaultTheme: "auto"
   homeInfoParams:
