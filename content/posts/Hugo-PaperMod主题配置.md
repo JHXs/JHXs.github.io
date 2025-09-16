@@ -4,8 +4,6 @@ date: 2025-09-16
 tags:
   - blog
   - hugo
-  - "#hugo-thems"
-  - "#PaperMod"
   - hugo-thems
   - PaperMod
 slug: 10:52
