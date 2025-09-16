@@ -46,14 +46,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;weight&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m"&gt;3&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在&lt;code&gt;content&lt;/code&gt;文件夹中创建&lt;code&gt;search.md&lt;/code&gt;并添加以下配置：&lt;/p&gt;</description></item><item><title>Hugo</title><link>https://jhxs.github.io/posts/1706/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1706/</guid><description>学习使用hugo搭建个人博客</description></item><item><title>Hugo</title><link>https://jhxs.github.io/posts/1706/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1706/</guid><description>学习使用hugo搭建个人博客</description></item><item><title>Obsidian</title><link>https://jhxs.github.io/posts/2106/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/2106/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;[!tip] 插件列表&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://forum-zh.obsidian.md/t/topic/44910"&gt;用于Obsidian图片管理的4个插件 - 经验分享 - Obsidian 中文论坛&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Image Converter&lt;/li&gt;
-&lt;li&gt;Auto link title&lt;/li&gt;
-&lt;li&gt;Enveloppe —— 将 Obsidian 中的文章和本地附件上传到 Github 仓库，上传前可以指定文件目录、自定义内容替换等操作。&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;</description></item><item><title>VSCode</title><link>https://jhxs.github.io/posts/2151/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/2151/</guid><description>&lt;h1 id="配置c环境"&gt;配置C环境&lt;/h1&gt;
+&lt;/div&gt;&lt;p&gt;在&lt;code&gt;content&lt;/code&gt;文件夹中创建&lt;code&gt;search.md&lt;/code&gt;并添加以下配置：&lt;/p&gt;</description></item><item><title>Hugo</title><link>https://jhxs.github.io/posts/1706/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1706/</guid><description>学习使用hugo搭建个人博客</description></item><item><title>Hugo</title><link>https://jhxs.github.io/posts/1706/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1706/</guid><description>学习使用hugo搭建个人博客</description></item><item><title>VSCode</title><link>https://jhxs.github.io/posts/2151/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/2151/</guid><description>&lt;h1 id="配置c环境"&gt;配置C环境&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[!important] &lt;a href="https://www.cnblogs.com/duruofei/p/15674502.html"&gt;https://www.cnblogs.com/duruofei/p/15674502.html&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id="安装mingw"&gt;安装Mingw&lt;/h2&gt;
