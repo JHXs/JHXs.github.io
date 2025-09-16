@@ -294,10 +294,15 @@ cover.image: ""
 
 ### Obsidian 命令
 
-先使用命令行发布，输入 active，然后选择 Enveloppe 即可，记着文章的 share 属性要开启，即 true。
+先使用命令行发布当前文章，输入 active，然后选择 Enveloppe 即可，记着文章的 share 属性要开启，即 true。
+
 如果你想上传多个 share 为 true 的文章，使用的命令为：
 - `Refresh published and upload new notes` 将所有 share 为 true 且新更新的文章发布
 - `Refresh all published notes` 将所有 share 为 true 的文章都发布
+
+### 菜单
+
+当然插件的配置也支持菜单模式，配置前往：Plugin settings -> Menu。
 
 # 部署博客
 
