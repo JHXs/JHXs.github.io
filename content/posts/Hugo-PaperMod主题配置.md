@@ -1,7 +1,8 @@
 ---
 title: Hugo-PaperMod主题配置
 date: 2025-09-16
-lastmod: 2025-09-16T19:43:54+08:00
+lastmod:
+  - 2025-09-16T20:38:36+08:00
 tags:
   - blog
   - hugo
@@ -553,6 +554,8 @@ date: 2025-09-15
 lastmod: 2025-09-16T16:32:00+08:00
 author: hansel
 ```
+
+可以使用 Obsidian 的 Update modified date 插件实现自动更新 lastmod 属性。
 
 # 抄袭对象
 
