@@ -3,9 +3,10 @@ tags:
   - MJJ
   - blog
   - hugo
-title: Hugo
-date: 2025-09-15
-slug: 17:06
+title: 使用 Hugo 搭建博客
+date: 2025-09-16
+lastmod: 2025-09-16T19:51:20+08:00
+slug: 19:51
 share: true
 description: 学习使用hugo搭建个人博客
 series: Hugo
@@ -14,7 +15,6 @@ dir: posts
 cover:
   image: ""
 ---
-
 # 手动上传 github
 ## 准备
 
