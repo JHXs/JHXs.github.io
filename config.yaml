@@ -4,7 +4,7 @@ theme: 'PaperMod'  # 主题名称，和themes文件夹下的一致
 languageCode: zh-cn # en-us
 pagination:
   pagerSize: 10 # 首页文章显示个数
-summaryLength: 999999 # 首页文章摘要字数
+# summaryLength: 999999 # 首页文章摘要字数
 
 hasCJKLanguage: true # 自动检测是否包含中文日文韩文,如果文章中使用了很多中文引号的话可以开启
 enableInlineShortcodes: true
@@ -13,27 +13,34 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-pygmentsUseClasses: true
 
 defaultContentLanguage: zh # 最顶部首先展示的语言页面
-defaultContentLanguageInSubdir: true
+defaultContentLanguageInSubdir: false # URL 中是否显示语言代码
 
 languages:
     zh:
-      languageName: "Chinese"
+      languageName: "中文"
       # contentDir: content/english
+      languageCode: zh-cn
       weight: 1
-      menu:
-        main:
-          - name: "📚文章"
-            url: "/posts"
-            weight: 1
-          - name: "⏱时间轴"
-            url: "/archives"
-            weight: 2
-          - name: "🔍搜索"
-            url: "search"
-            weight: 3
+
+menu:
+  main:
+    - name: "🏠主页"
+      url: "/"
+      weight: 1
+    - name: "📚文章"
+      url: "/posts"
+      weight: 1
+    - name: "⏱时间轴"
+      url: "/archives"
+      weight: 2
+    - name: "🏷️标签"
+      url: "/tags"
+      weight: 3
+    - name: "🔍搜索"
+      url: "/search/"
+      weight: 4
 
 outputs:
   home:
@@ -42,13 +49,32 @@ outputs:
     - JSON
 
 params:
-  showtoc: true   # 让文章页出现目录
-  TocOpen: true # 自动展开目录
-  DateFormat: "2006年01月02日"
-  defaultTheme: "auto"
   homeInfoParams:
     Title: "你好，我是 hansel "
     Content: "欢迎来到我的博客主页 "
+
+  showtoc: true   # 让文章页出现目录
+  TocOpen: true # 自动展开目录
+
+  DateFormat: "2006年01月02日"
+  defaultTheme: "auto"
+  disableThemeToggle: false # 是否禁用主题切换按钮
+  ShowShareButtons: true
+  # ShowReadingTime: true # 显示阅读时间
+  # disableSpecialistPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideFooter: false # 隐藏页脚
+  ShowWordCounts: true
+  lazyLoad: true # 图片懒加载
+
+  enableGitInfo: true        # 把 git 提交时间当作 lastmod
+  ShowLastMod: true #显示文章更新时间
+
+  comments: true # 是否启用评论功能
+  
 
 markup:
     goldmark:
@@ -56,17 +82,10 @@ markup:
             unsafe: true # HUGO 默认转义 Markdown 文件中的 HTML 代码，如需开启的话
     highlight:
         # anchorLineNos: true
-        codeFences: true
-        guessSyntax: true
-        lineNos: true
-        # noClasses: false
+        codeFences: true # 启用代码围栏高亮
+        guessSyntax: true # 自动猜测代码语言
+        lineNos: true  # 显示行号
+        noClasses: false # 使用 CSS class 控制样式（新版推荐写法）
         # style: monokai
-        style: darcula
-
-        # codeFences：代码围栏功能，这个功能一般都要设为 true 的，不然很难看，就是干巴巴的-代码文字，没有颜色。
-        # guessSyntax：猜测语法，这个功能建议设置为 true, 如果你没有设置要显示的语言则会自动匹配。
-        # hl_Lines：高亮的行号，一般这个不设置，因为每个代码块我们可能希望让高亮的地方不一样。
-        # lineNoStart：行号从编号几开始，一般从 1 开始。
-        # lineNos：是否显示行号，我比较喜欢显示，所以我设置的为 true.
-        # lineNumbersInTable：使用表来格式化行号和代码,而不是 标签。这个属性一般设置为 true.
-        # noClasses：使用 class 标签，而不是内嵌的内联样式
+        style: darcula # 代码高亮主题
+        
