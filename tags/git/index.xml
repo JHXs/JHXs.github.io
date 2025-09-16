@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>软件记录 on hansel 的垃圾站</title><link>https://jhxs.github.io/tags/%E8%BD%AF%E4%BB%B6%E8%AE%B0%E5%BD%95/</link><description>Recent content in 软件记录 on hansel 的垃圾站</description><generator>Hugo -- 0.150.0</generator><language>zh-cn</language><lastBuildDate>Tue, 16 Sep 2025 19:59:08 +0800</lastBuildDate><atom:link href="https://jhxs.github.io/tags/%E8%BD%AF%E4%BB%B6%E8%AE%B0%E5%BD%95/index.xml" rel="self" type="application/rss+xml"/><item><title>git使用教程</title><link>https://jhxs.github.io/posts/1959/</link><pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1959/</guid><description>&lt;h1 id="基础配置"&gt;&lt;strong&gt;基础配置&lt;/strong&gt;&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Git on hansel 的垃圾站</title><link>https://jhxs.github.io/tags/git/</link><description>Recent content in Git on hansel 的垃圾站</description><generator>Hugo -- 0.150.0</generator><language>zh-cn</language><lastBuildDate>Tue, 16 Sep 2025 19:59:08 +0800</lastBuildDate><atom:link href="https://jhxs.github.io/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>git使用教程</title><link>https://jhxs.github.io/posts/1959/</link><pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1959/</guid><description>&lt;h1 id="基础配置"&gt;&lt;strong&gt;基础配置&lt;/strong&gt;&lt;/h1&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
@@ -56,12 +56,4 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id="远程仓库操作"&gt;&lt;strong&gt;远程仓库操作&lt;/strong&gt;&lt;/h1&gt;
 &lt;h2 id="连接远程仓库"&gt;&lt;strong&gt;连接远程仓库&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;配置ssh密钥，将公钥传到github&lt;/p&gt;</description></item><item><title>Obsidian</title><link>https://jhxs.github.io/posts/2106/</link><pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/2106/</guid><description>&lt;blockquote&gt;
-&lt;p&gt;[!tip] 插件列表&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://forum-zh.obsidian.md/t/topic/44910"&gt;用于Obsidian图片管理的4个插件 - 经验分享 - Obsidian 中文论坛&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Image Converter&lt;/li&gt;
-&lt;li&gt;Auto link title&lt;/li&gt;
-&lt;li&gt;Enveloppe —— 将 Obsidian 中的文章和本地附件上传到 Github 仓库，上传前可以指定文件目录、自定义内容替换等操作。&lt;/li&gt;
-&lt;li&gt;Update modified date 插件&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;</description></item></channel></rss>
+&lt;p&gt;配置ssh密钥，将公钥传到github&lt;/p&gt;</description></item></channel></rss>

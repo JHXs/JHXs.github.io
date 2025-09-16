@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>hansel 的垃圾站</title><link>https://jhxs.github.io/</link><description>Recent content on hansel 的垃圾站</description><generator>Hugo -- 0.150.0</generator><language>zh-cn</language><lastBuildDate>Tue, 16 Sep 2025 19:57:25 +0800</lastBuildDate><atom:link href="https://jhxs.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2025-09-16</title><link>https://jhxs.github.io/journal/1946/</link><pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/journal/1946/</guid><description>&lt;p&gt;唉。。。。。。。。。。。&lt;/p&gt;</description></item><item><title>Hugo-PaperMod主题配置</title><link>https://jhxs.github.io/posts/1922/</link><pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1922/</guid><description>&lt;h1 id="添加搜索页面"&gt;添加搜索页面&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>hansel 的垃圾站</title><link>https://jhxs.github.io/</link><description>Recent content on hansel 的垃圾站</description><generator>Hugo -- 0.150.0</generator><language>zh-cn</language><lastBuildDate>Tue, 16 Sep 2025 19:59:08 +0800</lastBuildDate><atom:link href="https://jhxs.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>2025-09-16</title><link>https://jhxs.github.io/journal/1946/</link><pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/journal/1946/</guid><description>&lt;p&gt;唉。。。。。。。。。。。&lt;/p&gt;</description></item><item><title>git使用教程</title><link>https://jhxs.github.io/posts/1959/</link><pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1959/</guid><description>&lt;h1 id="基础配置"&gt;&lt;strong&gt;基础配置&lt;/strong&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git config --global user.name &lt;span class="s2"&gt;&amp;#34;hansel&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git config --global user.email &lt;span class="s2"&gt;&amp;#34;58466533+JHXs@users.noreply.github.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git config --global core.editor &lt;span class="s2"&gt;&amp;#34;vim&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;# 设置默认编辑器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id="本地仓库操作"&gt;&lt;strong&gt;本地仓库操作&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 id="初始化仓库"&gt;&lt;strong&gt;初始化仓库&lt;/strong&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;mkdir project &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; project
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git init &lt;span class="c1"&gt;# 创建.git目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id="基础工作流"&gt;&lt;strong&gt;基础工作流&lt;/strong&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 添加文件到暂存区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git add filename &lt;span class="c1"&gt;# 添加单个文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git add . &lt;span class="c1"&gt;# 添加所有修改&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 提交到本地仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git commit -m &lt;span class="s2"&gt;&amp;#34;提交说明&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 查看状态&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git status
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 查看提交历史&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;git log --oneline --graph
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id="远程仓库操作"&gt;&lt;strong&gt;远程仓库操作&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 id="连接远程仓库"&gt;&lt;strong&gt;连接远程仓库&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;配置ssh密钥，将公钥传到github&lt;/p&gt;</description></item><item><title>Hugo-PaperMod主题配置</title><link>https://jhxs.github.io/posts/1922/</link><pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/posts/1922/</guid><description>&lt;h1 id="添加搜索页面"&gt;添加搜索页面&lt;/h1&gt;
 &lt;p&gt;参考官方文档：&lt;a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page"&gt;&lt;strong&gt;搜索页面&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;PaperMod 使用 &lt;code&gt;Fuse.js Basic&lt;/code&gt; 作为搜索基础&lt;/p&gt;
 &lt;p&gt;添加以下配置到 config.yml 文件&lt;/p&gt;
