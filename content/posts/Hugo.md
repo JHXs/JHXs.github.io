@@ -19,7 +19,8 @@ dir: posts
 cover:
   image: ""
 ---
-# 手动部署
+
+# 手动上传 github
 ## 准备
 
 ### 安装软件
@@ -208,6 +209,98 @@ git push -f origin gh-pages
         - 分支：`gh-pages`
         - 目录：`/(root)`
     - 保存并等待 GitHub 自动生成网页（几分钟内）
+## **总结**
+
+- 每次想新写内容直接
+
+```bash
+# 文件存储在content下
+hugo new <你的文件路径>
+
+# 本地查看
+hugo server -D
+
+# 浏览器查看
+<http://localhost:1313>
+
+# 之后直接在根目录下,注意你当前的分支应该是 main
+## 查看分支
+git branch
+
+git add .
+git commit -m "你的日志"
+git push origin main
+```
+
+- 此后你写的 **`deploy.yml`** 会在 **actions** 下自动部署网页，**无需**在进入到public下再次推送静态网页
+- 您的网页源代码在 **`main`** 分支下，静态部署网页代码在 **`pulic`** 文件夹下(也是访问您网页的代码内容)
+
+# 使用 Obsidian + Enveloppe 插件自动上传github
+
+先按照 [Hugo > 手动上传 github]({{< relref "hugo.md" >}}#手动上传-github) 部分使用 hugo 初始化一个网站，并配置好你喜欢的主题，并发布到 Github 上。
+
+## Enveloppe 插件
+
+给 Obsidian 安装 [Enveloppe](https://github.com/Enveloppe/obsidian-enveloppe) 插件，该插件的作用是将 Obsidian 中的文章和本地附件上传到 Github 仓库，上传前可以指定文件目录、自定义内容替换等操作。
+
+- 仓库配置
+
+{{< figure src="/images/Hugo-1757987106488.webp"  width="700" height="288">}}
+
+注意：
+
+1. 生成的 token 不要放在 Github 的公共仓库，检测到 token 就会失效。
+2. 通过 here 生成 token 时的 [链接](https://github.com/settings/tokens/new?scopes=repo,workflow) 会自动带上权限，你只需要设置名字和过期时间即可。
+
+- 插件配置
+
+> [使用 Obsidian 免费建个人博客 \| PrintLove](https://www.printlove.cn/obsidian-blog/#%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE)
+
+前往 [miaogaolin/obsidian-github-publisher-hugo](https://github.com/miaogaolin/obsidian-github-publisher-hugo) 拷贝 settings.json 设置，然后粘贴导入插件：
+
+![Hugo-1757987358354.webp](/images/hugo-1757987358354.webp)
+
+##  Obsidian 文章模板
+
+配置是和 Hugo 强关联的，如果你用了其它工具，就根据自己的情况调整。
+```markdown
+---
+title: "{{title}}"
+date: "{{date}}"
+tags:
+  - blog
+slug: "{{time}}"
+share: true
+description: ""
+series:
+lastmod:
+author: hansel
+dir: posts
+cover.image: ""
+---
+```
+
+- `data` :  创建时间，我这边生成的格式是 YYYY-MM-DDTHH:mm:ss
+- `slug` : 自定义 URL 中文章的访问名称，默认用时间戳填充模板格式为X
+- `share`:  配合 Enveloppe插件用的,true表示 obsidian 的文章可以发布
+- `description`:  文章的描述 SEO 优化，为空时默认会截取文章前面的内容
+- `series: "系列"`: 系列文章
+- `lastmod`:  文章最后更新的时间
+- `author`: 作者名称
+- `dir` 属性：设置文章的上传目录，如果不设置，则以 `content/` 为根目录。`dir:"posts"` 表示上传到 `content/posts` 目录，也只有在 posts 目录下才会在网页上直接显示。
+- `cover.image`：设置封面，在使用 Enveloppe 后会转化为二级 key。
+
+## 发布
+
+### Obsidian 命令
+
+先使用命令行发布当前文章，输入 active，然后选择 Enveloppe 即可，记着文章的 share 属性要开启，即 true。
+
+如果你想上传多个 share 为 true 的文章，使用的命令为：
+- `Refresh published and upload new notes` 将所有 share 为 true 且新更新的文章发布
+- `Refresh all published notes` 将所有 share 为 true 的文章都发布
+
+# 部署博客
 
 ## **部署到 GitHub Pages（使用 Actions 自动部署）**
 
@@ -235,60 +328,46 @@ name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # 👈 每次推送到 main 分支就会自动部署
-
+    branches: [main] # 👈 每次推送到 main 分支就会自动部署
+    
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          submodules: true   # 主题若用 submodule 需拉取
+          fetch-depth: 0
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
           extended: true
 
       - name: Build Hugo site
         run: hugo --minify
-
+        
       - name: Deploy to GitHub Pages 🚀
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
 ```
+
+- 在 **GitHub** 设置 **`Pages`** 分支
+    - 打开你的 GitHub 仓库
+    - 点击菜单栏 **Settings → Pages**
+    - 在 **Source** 选项中选择：
+        - 分支：`gh-pages`
+        - 目录：`/(root)`
+    - 保存并等待 GitHub 自动生成网页（几分钟内）
+
 > [!tip] 注意
-> - 必须给 `GITHUB_TOKEN` **写权限**（ Settings → Actions → General → Read and write permissions）。
+> - 必须给 `GITHUB_TOKEN` **写权限**（ `Settings → Actions → General → Read and write permissions`）。
 
-## **总结**
-
-- 每次想新写内容直接
-
-```bash
-# 文件存储在content下
-hugo new <你的文件路径>
-
-# 本地查看
-hugo server -D
-
-# 浏览器查看
-<http://localhost:1313>
-
-# 之后直接在根目录下,注意你当前的分支应该是 main
-## 查看分支
-git branch
-
-git add .
-git commit -m "你的日志"
-git push origin main
-```
-
-- 此后你写的 **`deploy.yml`** 会在 **actions** 下自动部署网页，**无需**在进入到public下再次推送静态网页
-- 您的网页源代码在 **`main`** 分支下，静态部署网页代码在 **`pulic`** 文件夹下(也是访问您网页的代码内容)
+# 抄袭对象
 
 > [!tip]  参考
 > - [使用Hugo 搭建博客并部署到 GitHub Pages \| VSVnakers 主页](https://vsvnakers.github.io/docs/hugo-deploy/)
