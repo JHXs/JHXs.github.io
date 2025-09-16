@@ -6,7 +6,7 @@ tags:
 title: 使用 Hugo 搭建博客
 date: 2025-09-16
 lastmod:
-  - 2025-09-16T20:41:39+08:00
+  - 2025-09-16T20:48:20+08:00
 slug: 19:51
 share: true
 description: 学习使用hugo搭建个人博客
@@ -57,6 +57,7 @@ cd <你的文件夹名>
 ### 添加主题
 
 > (此处使用 **主题** - **PaperMod** 作为例子)
+> 可尝试主题 [GitHub - dillonzq/LoveIt: ❤️A clean, elegant but advanced blog theme for Hugo 一个简洁、优雅且高效的 Hugo 主题](https://github.com/dillonzq/LoveIt?tab=readme-ov-file)
 
 - 在当前 “根目录” 文件夹目录下
 
