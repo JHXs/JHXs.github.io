@@ -6,7 +6,7 @@ tags:
 title: 使用 Hugo 搭建博客
 date: 2025-09-16
 lastmod:
-  - 2025-09-16T20:48:20+08:00
+  - 2025-09-16T20:54:25+08:00
 slug: 19:51
 share: true
 description: 学习使用hugo搭建个人博客
