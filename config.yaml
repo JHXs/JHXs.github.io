@@ -60,7 +60,7 @@ params:
   DateFormat: "2006年01月02日"
   defaultTheme: "auto"
   disableThemeToggle: false # 是否禁用主题切换按钮
-  ShowShareButtons: true
+  # ShowShareButtons: true # 显示社交分享按钮
   # ShowReadingTime: true # 显示阅读时间
   # disableSpecialistPost: true
   displayFullLangName: true
