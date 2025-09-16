@@ -5,6 +5,7 @@ languageCode: zh-cn # en-us
 pagination:
   pagerSize: 10 # 首页文章显示个数
 # summaryLength: 999999 # 首页文章摘要字数
+enableGitInfo: true        # 把 git 提交时间当作 lastmod
 
 hasCJKLanguage: true # 自动检测是否包含中文日文韩文,如果文章中使用了很多中文引号的话可以开启
 enableInlineShortcodes: true
@@ -64,10 +65,9 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   hideFooter: false # 隐藏页脚
-  ShowWordCounts: true
+  ShowWordCount: true
   lazyLoad: true # 图片懒加载
 
-  enableGitInfo: true        # 把 git 提交时间当作 lastmod
   ShowLastMod: true #显示文章更新时间
 
   comments: true # 是否启用评论功能
