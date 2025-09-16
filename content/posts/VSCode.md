@@ -1,6 +1,8 @@
 ---
 title: VSCode
 date: 2025-09-15
+lastmod:
+  - 2025-09-16T19:55:26+08:00
 tags:
   - blog
   - productivity
@@ -8,13 +10,9 @@ tags:
   - vscode
 slug: 21:51
 share: true
-description: ""
 series:
-lastmod: 2025-09-15T19:10:00
 author: hansel
 dir: posts
-cover:
-  image: ""
 ---
 # 配置C环境
 
