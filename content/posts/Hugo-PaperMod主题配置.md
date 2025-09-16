@@ -1,8 +1,7 @@
 ---
 title: Hugo-PaperMod主题配置
 date: 2025-09-16
-lastmod:
-  - 2025-09-16T20:38:36+08:00
+lastmod: 2025-09-13T19:53:01+08:00
 tags:
   - blog
   - hugo
