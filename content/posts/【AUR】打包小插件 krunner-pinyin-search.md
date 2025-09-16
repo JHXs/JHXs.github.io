@@ -6,8 +6,7 @@ tags:
   - 搞基记录
   - Arch
   - AUR
-lastmod:
-  - 2025-09-16T20:29:51+08:00
+lastmod: 2025-09-16T20:29:51+08:00
 slug: 20:04
 author: hansel
 share: true
