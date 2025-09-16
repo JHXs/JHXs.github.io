@@ -1,16 +1,15 @@
 ---
-title: 修改Hugo-PaperMod主题加入侧边目录
+title: Hugo-PaperMod主题配置
 date: 2025-09-16
+lastmod: 2025-09-16T19:43:54+08:00
 tags:
   - blog
   - hugo
   - hugo-thems
   - PaperMod
-slug: 10:52
+slug: 19:22
 share: true
-description: ""
 series: Hugo
-lastmod: 2025-09-16T16:06:00
 author: hansel
 dir: posts
 cover:
@@ -493,6 +492,66 @@ menu:
     - name: 🏷️标签
       url: /tags
       weight: 2
+```
+
+# 添加更新时间
+
+在 `layouts/partials/post_meta.html`  创建覆盖主题的美化版 `post_meta.html` ：
+
+```html
+{{- $scratch := newScratch }}
+
+{{- /* 创建时间 */ -}}
+{{- if not .Date.IsZero -}}
+  {{- $scratch.Add "meta" (slice (printf "<span title='创建于：%s'>创建于：%s</span>" (.Date | time.Format (default "2006年01月02日" site.Params.DateFormat)) (.Date | time.Format (default "2006年01月02日" site.Params.DateFormat)))) -}}
+{{- end -}}
+
+{{- /* 最后修改时间 */ -}}
+{{- if or .Params.ShowLastMod .Site.Params.ShowLastMod -}}
+  {{- if not .Lastmod.IsZero -}}
+    {{- $scratch.Add "meta" (slice (printf "<span title='最后更新于：%s'>最后更新于：%s</span>" (.Lastmod | time.Format (default "2006年01月02日" site.Params.DateFormat)) (.Lastmod | time.Format (default "2006年01月02日" site.Params.DateFormat)))) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* 阅读时间 */ -}}
+{{- if (.Param "ShowReadingTime") -}}
+  {{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) -}}
+{{- end }}
+
+{{- /* 文章字数 */ -}}
+{{- if (.Param "ShowWordCount") -}}
+  {{- $scratch.Add "meta" (slice (i18n "words" .WordCount | default (printf "%d 字" .WordCount))) -}}
+{{- end }}
+
+{{- /* 作者 */ -}}
+{{- if not (.Param "hideAuthor") -}}
+  {{- with (partial "author.html" .) }}
+    {{- $scratch.Add "meta" (slice .) -}}
+  {{- end }}
+{{- end }}
+
+{{- /* 输出 meta */ -}}
+{{- with ($scratch.Get "meta") }}
+  {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}
+```
+
+确保：
+
+- `config.yaml` 里保持：
+
+```yaml
+params:
+  ShowLastMod: true
+  ShowWordCount: true
+```
+
+- 在文章 front matter：
+
+```yaml
+date: 2025-09-15
+lastmod: 2025-09-16T16:32:00+08:00
+author: hansel
 ```
 
 # 抄袭对象
