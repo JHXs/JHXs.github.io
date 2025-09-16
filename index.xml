@@ -72,4 +72,4 @@
 &lt;p&gt;&lt;img alt="%E5%9B%BE%E7%89%87 2.png" loading="lazy" src="_extras/%e5%9b%be%e7%89%87-2.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;新建C源文件，并用vscode打开，点击调试→创建&lt;code&gt;launch.json&lt;/code&gt;文件，依次选择&lt;code&gt;C++(GDB/LLDB)&lt;/code&gt;, 默认配置。此时会自动在当前目录下新建&lt;code&gt;.vscode&lt;/code&gt;文件夹并生成&lt;code&gt;lauch.json&lt;/code&gt; 将其中代码更改如下将光标放在标签上可以显示此标签的意义&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;新建C源文件，并用vscode打开，点击调试→创建&lt;code&gt;launch.json&lt;/code&gt;文件，依次选择&lt;code&gt;C++(GDB/LLDB)&lt;/code&gt;, 默认配置。此时会自动在当前目录下新建&lt;code&gt;.vscode&lt;/code&gt;文件夹并生成&lt;code&gt;lauch.json&lt;/code&gt; 将其中代码更改如下将光标放在标签上可以显示此标签的意义&lt;/p&gt;</description></item><item><title>@2025年9月13日 17-47</title><link>https://jhxs.github.io/journal/1953/</link><pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate><guid>https://jhxs.github.io/journal/1953/</guid><description>&lt;p&gt;今天我打包了一个 &lt;code&gt;Krunner&lt;/code&gt; 的小小 拼音搜索插件到 &lt;code&gt;aur&lt;/code&gt; ，这种感觉太好了，虽然我搞了好久，一直问AI,哈哈哈哈，我太菜了。&lt;/p&gt;</description></item></channel></rss>
