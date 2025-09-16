@@ -5,7 +5,6 @@ tags:
   - blog
   - productivity
   - Utility
-  - "#vscode"
   - vscode
 slug: 21:51
 share: true
@@ -16,7 +15,6 @@ author: hansel
 dir: posts
 cover:
   image: ""
-toc: true
 ---
 # 配置C环境
 
