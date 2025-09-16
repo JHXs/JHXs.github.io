@@ -30,15 +30,18 @@ menu:
     - name: "📚文章"
       url: "/posts"
       weight: 1
+    - name: "✍日记"
+      url: "/journal"
+      weight: 2    
     - name: "⏱时间轴"
       url: "/archives"
-      weight: 2
+      weight: 3
     - name: "🏷️标签"
       url: "/tags"
-      weight: 3
+      weight: 4
     - name: "🔍搜索"
       url: "/search/"
-      weight: 4
+      weight: 5
 
 outputs:
   home:
