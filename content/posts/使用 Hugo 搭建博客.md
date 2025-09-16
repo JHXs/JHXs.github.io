@@ -3,14 +3,12 @@ tags:
   - MJJ
   - blog
   - hugo
-created: 2025-09-15T11:31:00
 title: Hugo
 date: 2025-09-15
 slug: 17:06
 share: true
 description: 学习使用hugo搭建个人博客
 series: Hugo
-lastmod: 2025-09-16T16:32:00
 author: hansel
 dir: posts
 cover:
