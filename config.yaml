@@ -26,9 +26,6 @@ languages:
 
 menu:
   main:
-    - name: "🏠主页"
-      url: "/"
-      weight: 1
     - name: "📚文章"
       url: "/posts"
       weight: 1
@@ -88,4 +85,3 @@ markup:
         noClasses: false # 使用 CSS class 控制样式（新版推荐写法）
         # style: monokai
         style: darcula # 代码高亮主题
-        
