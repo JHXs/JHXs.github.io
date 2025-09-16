@@ -5,7 +5,8 @@ tags:
   - hugo
 title: 使用 Hugo 搭建博客
 date: 2025-09-16
-lastmod: 2025-09-16T19:51:20+08:00
+lastmod:
+  - 2025-09-16T20:41:39+08:00
 slug: 19:51
 share: true
 description: 学习使用hugo搭建个人博客
@@ -262,26 +263,24 @@ git push origin main
 ---
 title: "{{title}}"
 date: "{{date}}"
+lastmod: "{{date:YYYY-MM-DDTHH:mm:ss+08:00}}"
 tags:
-  - blog
 slug: "{{time}}"
-share: true
-description: ""
-series:
-lastmod:
 author: hansel
+share: true
+series:
 dir: posts
 cover.image: ""
 ---
 ```
 
-- `data` :  创建时间，我这边生成的格式是 YYYY-MM-DDTHH:mm:ss
-- `slug` : 自定义 URL 中文章的访问名称，默认用时间戳填充模板格式为X
-- `share`:  配合 Enveloppe插件用的,true表示 obsidian 的文章可以发布
-- `description`:  文章的描述 SEO 优化，为空时默认会截取文章前面的内容
-- `series: "系列"`: 系列文章
+- `date` :  创建时间，我这边生成的格式是 YYYY-MM-DDTHH:mm:ss
 - `lastmod`:  文章最后更新的时间
+- `tags:` 标签
+- `slug` : 自定义 URL 中文章的访问名称，默认用时间戳填充模板格式为X
 - `author`: 作者名称
+- `share`:  配合 Enveloppe插件用的,true表示 obsidian 的文章可以发布
+- `series: "系列"`: 系列文章
 - `dir` 属性：设置文章的上传目录，如果不设置，则以 `content/` 为根目录。`dir:"posts"` 表示上传到 `content/posts` 目录，也只有在 posts 目录下才会在网页上直接显示。
 - `cover.image`：设置封面，在使用 Enveloppe 后会转化为二级 key。
 
