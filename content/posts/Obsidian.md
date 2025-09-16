@@ -1,19 +1,17 @@
 ---
 tags:
-  - "#Obsidian"
-  - "#productivity"
   - Utility
-  - blog
   - Obsidian
   - productivity
+  - 软件记录
 created: 2025-09-15T12:01:00
 title: Obsidian
 date: 2025-09-15
 slug: 21:06
 share: true
 description: ""
-series: 系列
-lastmod: 2025-09-15T16:17:00
+series: 笔记软件
+lastmod: 2025-09-16T16:32:00
 author: hansel
 dir: posts
 cover:
