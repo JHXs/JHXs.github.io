@@ -33,6 +33,7 @@ outputs:
 
 params:
   showtoc: true   # 让文章页出现目录
+  TocSide: true   # 开启侧边目录
   DateFormat: "2006年01月02日"
   defaultTheme: "auto"
   homeInfoParams:
