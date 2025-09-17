@@ -1,8 +1,7 @@
 ---
 title: VSCode
 date: 2025-09-15
-lastmod:
-  - 2025-09-16T19:55:26+08:00
+lastmod: 2025-09-16T19:55:26+08:00
 tags:
   - blog
   - productivity
