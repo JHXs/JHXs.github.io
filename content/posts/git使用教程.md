@@ -1,7 +1,8 @@
 ---
 title: git使用教程
 date: 2025-09-16
-lastmod: 2025-09-16T19:59:08+08:00
+lastmod:
+  - 2025-09-16T19:59:43+08:00
 tags:
   - 软件记录
   - git
@@ -235,6 +236,17 @@ git add -p  # 交互式选择修改片段
 
 ## **子模块管理**
 
+添加子模块到特定文件夹
+
 ```Bash
-git submodule add https://github.com/other/repo.git
+git submodule add https://github.com/other/repo.git <outputdir>
 ```
+
+删除子模块
+
+```shell
+git submodule deinit -f <outputdir>
+git rm -rf <outputdir>
+git commit -m "remove PaperMod theme"
+```
+
