@@ -1,0 +1,35 @@
+{{- $scratch := newScratch }}
+
+{{- /* 创建时间 */ -}}
+{{- if not .Date.IsZero -}}
+  {{- $scratch.Add "meta" (slice (printf "<span title='创建于：%s'>创建于：%s</span>" (.Date | time.Format (default "2006年01月02日" site.Params.DateFormat)) (.Date | time.Format (default "2006年01月02日" site.Params.DateFormat)))) -}}
+{{- end -}}
+
+{{- /* 最后修改时间 */ -}}
+{{- if or .Params.ShowLastMod .Site.Params.ShowLastMod -}}
+  {{- if not .Lastmod.IsZero -}}
+    {{- $scratch.Add "meta" (slice (printf "<span title='最后更新于：%s'>最后更新于：%s</span>" (.Lastmod | time.Format (default "2006年01月02日" site.Params.DateFormat)) (.Lastmod | time.Format (default "2006年01月02日" site.Params.DateFormat)))) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* 阅读时间 */ -}}
+{{- if (.Param "ShowReadingTime") -}}
+  {{- $scratch.Add "meta" (slice (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) -}}
+{{- end }}
+
+{{- /* 文章字数 */ -}}
+{{- if (.Param "ShowWordCount") -}}
+  {{- $scratch.Add "meta" (slice (i18n "words" .WordCount | default (printf "%d 字" .WordCount))) -}}
+{{- end }}
+
+{{- /* 作者 */ -}}
+{{- if not (.Param "hideAuthor") -}}
+  {{- with (partial "author.html" .) }}
+    {{- $scratch.Add "meta" (slice .) -}}
+  {{- end }}
+{{- end }}
+
+{{- /* 输出 meta */ -}}
+{{- with ($scratch.Get "meta") }}
+  {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- end -}}

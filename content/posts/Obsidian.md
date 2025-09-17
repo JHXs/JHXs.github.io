@@ -1,7 +1,8 @@
 ---
 title: Obsidian
 date: 2025-09-15
-lastmod: 2025-09-16T19:56:39+08:00
+lastmod:
+  - 2025-09-16T19:56:39+08:00
 tags:
   - Utility
   - Obsidian

@@ -1,11 +1,11 @@
 baseURL: 'https://jhxs.github.io/' # 绑定的域名
 title: 'hansel 的垃圾站'
-theme: 'PaperMod-PE'  # 主题名称，和themes文件夹下的一致
+theme: 'PaperMod'  # 主题名称，和themes文件夹下的一致
 languageCode: zh-cn # en-us
 pagination:
   pagerSize: 10 # 首页文章显示个数
 # summaryLength: 999999 # 首页文章摘要字数
-# enableGitInfo: true        # 把 git 提交时间当作 lastmod
+enableGitInfo: true        # 把 git 提交时间当作 lastmod
 
 hasCJKLanguage: true # 自动检测是否包含中文日文韩文,如果文章中使用了很多中文引号的话可以开启
 enableInlineShortcodes: true
@@ -36,9 +36,12 @@ menu:
     - name: "⏱时间轴"
       url: "/archives"
       weight: 3
+    - name: "🏷️标签"
+      url: "/tags"
+      weight: 4
     - name: "🔍搜索"
       url: "/search/"
-      weight: 4
+      weight: 5
 
 outputs:
   home:
@@ -47,29 +50,19 @@ outputs:
     - JSON
 
 params:
-  # profile-mode
-  profileMode:
-    enabled: true # needs to be explicitly set
-    title: Hansel 的垃圾站
-    subtitle: "👋欢迎来到我的垃圾站，如果想污染你的大脑，请随意浏览！"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: "📖文章"
-        url: posts
-      - name: "✍日记"
-        url: journal
-
-  enableTypeIt: true # 主页副标题使用 TypeIt 动态效果
+  homeInfoParams:
+    Title: "你好，我是 hansel "
+    Content: "欢迎来到我的博客主页 "
 
   showtoc: true   # 让文章页出现目录
   TocOpen: true # 自动展开目录
 
   DateFormat: "2006年01月02日"
   defaultTheme: "auto"
-  disableThemeToggle: true # 是否禁用主题切换按钮
+  disableThemeToggle: false # 是否禁用主题切换按钮
+  # ShowShareButtons: true # 显示社交分享按钮
+  # ShowReadingTime: true # 显示阅读时间
+  # disableSpecialistPost: true
   displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
@@ -78,40 +71,11 @@ params:
   ShowWordCount: true
   lazyLoad: true # 图片懒加载
 
-  ShowLastMod: true #显示文章最后更新时间
+  ShowLastMod: true #显示文章更新时间
 
-  enableThemeToggleFloat: true # 悬浮按钮 —— Go to Comment
-  enableScrollToTop: true # 悬浮按钮 —— Go to Top
-  enableThemeToggleFloat: true # 悬浮按钮 —— Theme Toggle
-  enableFancybox: true # 启用 Fancybox 灯箱
-
-  # 启用数学公式渲染
-  enableMath: true
-  # 数学公式渲染方式: `katex` or `mathjax`
-  mathematicsRenderer: katex
-
-
-  # 启用评论
-  comments: true
-  # 评论区标题 (可在文章 `frontmatter` 中设置)
-  discussionTitle: 欢迎来到评论区
-  # 评论区子标题 (可在文章 `frontmatter` 中设置)
-  discussionSubtitle: 感谢您的耐心阅读！来选个表情，或者留个评论吧！
-  # giscus 评论参数
-  giscus:
-    repo: "JHXs/JHXs.github.io"
-    repoId: "R_kgDOPwFGgw"
-    category: "Announcements"
-    categoryId: "DIC_kwDOPwFGg84Cvi1O"
-    mapping: "pathname"
-    strict: "0"
-    reactionsEnabled: "1"
-    emitMetadata: "0"
-    inputPosition: "top"
-    lightTheme: "light"
-    darkTheme: "dark"
-    lang: "zh-CN"
+  comments: true # 是否启用评论功能
   
+
 markup:
     goldmark:
         renderer:
@@ -124,8 +88,3 @@ markup:
         noClasses: false # 使用 CSS class 控制样式（新版推荐写法）
         # style: monokai
         style: darcula # 代码高亮主题
-
-taxonomies:
-  # category: categories
-  tag: tags
-  series: series
