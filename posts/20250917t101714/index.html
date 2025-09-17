@@ -1,0 +1,300 @@
+<!doctype html><html lang=zh dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>📝 Git 本地 ↔ 远程管理速查表 | hansel 的垃圾站</title><meta name=keywords content="Utility,软件记录,git"><meta name=description content="🔗 远程仓库管理
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          添加远程仓库
+          git remote add origin <远程地址>
+      
+      
+          查看远程仓库
+          git remote -v
+      
+      
+          修改远程仓库地址
+          git remote set-url origin <新地址>
+      
+      
+          删除远程仓库
+          git remote remove origin
+      
+      
+          重命名远程仓库
+          git remote rename origin upstream
+      
+  
+
+🚀 推送到远程
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          首次推送本地分支到远程（并建立追踪关系）
+          git push -u origin main
+      
+      
+          推送当前分支
+          git push
+      
+      
+          推送指定分支
+          git push origin branch_name
+      
+      
+          推送所有分支
+          git push --all origin
+      
+      
+          推送标签
+          git push origin <tagname>
+      
+      
+          推送所有标签
+          git push --tags
+      
+  
+
+⬇️ 从远程获取更新
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          获取远程分支信息（不合并）
+          git fetch origin
+      
+      
+          拉取远程分支并合并到当前分支
+          git pull origin main
+      
+      
+          拉取并重置为远程分支（强制覆盖）
+          git fetch origin && git reset --hard origin/main
+      
+  
+
+🌿 分支与远程
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          查看本地和远程分支
+          git branch -a
+      
+      
+          建立本地分支并追踪远程分支
+          git checkout -b dev origin/dev
+      
+      
+          修改本地分支追踪的远程分支
+          git branch --set-upstream-to=origin/dev
+      
+      
+          删除远程分支
+          git push origin --delete branch_name
+      
+  
+
+🏷️ 标签与远程
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          新建标签
+          git tag v1.0.0
+      
+      
+          查看所有标签
+          git tag
+      
+      
+          推送标签到远程
+          git push origin v1.0.0
+      
+      
+          删除远程标签
+          git push origin :refs/tags/v1.0.0
+      
+  
+
+✅ 小贴士
+
+
+推荐 SSH 地址（git@github.com:xxx.git），避免频繁输入密码。"><meta name=author content="hansel"><link rel=canonical href=https://jhxs.github.io/posts/20250917t101714/><link crossorigin=anonymous href=/assets/css/stylesheet.2f957b0fa767c0095eb4672f2d456edc7ab17838f0851a4394be69c78226fba0.css integrity="sha256-L5V7D6dnwAletGcvLUVu3HqxeDjwhRpDlL5px4Im+6A=" rel="preload stylesheet" as=style><link rel=icon href=https://jhxs.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://jhxs.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://jhxs.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://jhxs.github.io/apple-touch-icon.png><link rel=mask-icon href=https://jhxs.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=zh href=https://jhxs.github.io/posts/20250917t101714/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:url" content="https://jhxs.github.io/posts/20250917t101714/"><meta property="og:site_name" content="hansel 的垃圾站"><meta property="og:title" content="📝 Git 本地 ↔ 远程管理速查表"><meta property="og:description" content="🔗 远程仓库管理 操作 命令 添加远程仓库 git remote add origin <远程地址> 查看远程仓库 git remote -v 修改远程仓库地址 git remote set-url origin <新地址> 删除远程仓库 git remote remove origin 重命名远程仓库 git remote rename origin upstream 🚀 推送到远程 操作 命令 首次推送本地分支到远程（并建立追踪关系） git push -u origin main 推送当前分支 git push 推送指定分支 git push origin branch_name 推送所有分支 git push --all origin 推送标签 git push origin <tagname> 推送所有标签 git push --tags ⬇️ 从远程获取更新 操作 命令 获取远程分支信息（不合并） git fetch origin 拉取远程分支并合并到当前分支 git pull origin main 拉取并重置为远程分支（强制覆盖） git fetch origin && git reset --hard origin/main 🌿 分支与远程 操作 命令 查看本地和远程分支 git branch -a 建立本地分支并追踪远程分支 git checkout -b dev origin/dev 修改本地分支追踪的远程分支 git branch --set-upstream-to=origin/dev 删除远程分支 git push origin --delete branch_name 🏷️ 标签与远程 操作 命令 新建标签 git tag v1.0.0 查看所有标签 git tag 推送标签到远程 git push origin v1.0.0 删除远程标签 git push origin :refs/tags/v1.0.0 ✅ 小贴士 推荐 SSH 地址（git@github.com:xxx.git），避免频繁输入密码。"><meta property="og:locale" content="zh-cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-09-17T00:00:00+00:00"><meta property="article:modified_time" content="2025-09-17T10:17:14+08:00"><meta property="article:tag" content="Utility"><meta property="article:tag" content="软件记录"><meta property="article:tag" content="Git"><meta name=twitter:card content="summary"><meta name=twitter:title content="📝 Git 本地 ↔ 远程管理速查表"><meta name=twitter:description content="🔗 远程仓库管理
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          添加远程仓库
+          git remote add origin <远程地址>
+      
+      
+          查看远程仓库
+          git remote -v
+      
+      
+          修改远程仓库地址
+          git remote set-url origin <新地址>
+      
+      
+          删除远程仓库
+          git remote remove origin
+      
+      
+          重命名远程仓库
+          git remote rename origin upstream
+      
+  
+
+🚀 推送到远程
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          首次推送本地分支到远程（并建立追踪关系）
+          git push -u origin main
+      
+      
+          推送当前分支
+          git push
+      
+      
+          推送指定分支
+          git push origin branch_name
+      
+      
+          推送所有分支
+          git push --all origin
+      
+      
+          推送标签
+          git push origin <tagname>
+      
+      
+          推送所有标签
+          git push --tags
+      
+  
+
+⬇️ 从远程获取更新
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          获取远程分支信息（不合并）
+          git fetch origin
+      
+      
+          拉取远程分支并合并到当前分支
+          git pull origin main
+      
+      
+          拉取并重置为远程分支（强制覆盖）
+          git fetch origin && git reset --hard origin/main
+      
+  
+
+🌿 分支与远程
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          查看本地和远程分支
+          git branch -a
+      
+      
+          建立本地分支并追踪远程分支
+          git checkout -b dev origin/dev
+      
+      
+          修改本地分支追踪的远程分支
+          git branch --set-upstream-to=origin/dev
+      
+      
+          删除远程分支
+          git push origin --delete branch_name
+      
+  
+
+🏷️ 标签与远程
+
+  
+      
+          操作
+          命令
+      
+  
+  
+      
+          新建标签
+          git tag v1.0.0
+      
+      
+          查看所有标签
+          git tag
+      
+      
+          推送标签到远程
+          git push origin v1.0.0
+      
+      
+          删除远程标签
+          git push origin :refs/tags/v1.0.0
+      
+  
+
+✅ 小贴士
+
+
+推荐 SSH 地址（git@github.com:xxx.git），避免频繁输入密码。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://jhxs.github.io/posts/"},{"@type":"ListItem","position":2,"name":"📝 Git 本地 ↔ 远程管理速查表","item":"https://jhxs.github.io/posts/20250917t101714/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"📝 Git 本地 ↔ 远程管理速查表","name":"📝 Git 本地 ↔ 远程管理速查表","description":"🔗 远程仓库管理 操作 命令 添加远程仓库 git remote add origin \u0026lt;远程地址\u0026gt; 查看远程仓库 git remote -v 修改远程仓库地址 git remote set-url origin \u0026lt;新地址\u0026gt; 删除远程仓库 git remote remove origin 重命名远程仓库 git remote rename origin upstream 🚀 推送到远程 操作 命令 首次推送本地分支到远程（并建立追踪关系） git push -u origin main 推送当前分支 git push 推送指定分支 git push origin branch_name 推送所有分支 git push --all origin 推送标签 git push origin \u0026lt;tagname\u0026gt; 推送所有标签 git push --tags ⬇️ 从远程获取更新 操作 命令 获取远程分支信息（不合并） git fetch origin 拉取远程分支并合并到当前分支 git pull origin main 拉取并重置为远程分支（强制覆盖） git fetch origin \u0026amp;\u0026amp; git reset --hard origin/main 🌿 分支与远程 操作 命令 查看本地和远程分支 git branch -a 建立本地分支并追踪远程分支 git checkout -b dev origin/dev 修改本地分支追踪的远程分支 git branch --set-upstream-to=origin/dev 删除远程分支 git push origin --delete branch_name 🏷️ 标签与远程 操作 命令 新建标签 git tag v1.0.0 查看所有标签 git tag 推送标签到远程 git push origin v1.0.0 删除远程标签 git push origin :refs/tags/v1.0.0 ✅ 小贴士 推荐 SSH 地址（git@github.com:xxx.git），避免频繁输入密码。\n","keywords":["Utility","软件记录","git"],"articleBody":"🔗 远程仓库管理 操作 命令 添加远程仓库 git remote add origin \u003c远程地址\u003e 查看远程仓库 git remote -v 修改远程仓库地址 git remote set-url origin \u003c新地址\u003e 删除远程仓库 git remote remove origin 重命名远程仓库 git remote rename origin upstream 🚀 推送到远程 操作 命令 首次推送本地分支到远程（并建立追踪关系） git push -u origin main 推送当前分支 git push 推送指定分支 git push origin branch_name 推送所有分支 git push --all origin 推送标签 git push origin 推送所有标签 git push --tags ⬇️ 从远程获取更新 操作 命令 获取远程分支信息（不合并） git fetch origin 拉取远程分支并合并到当前分支 git pull origin main 拉取并重置为远程分支（强制覆盖） git fetch origin \u0026\u0026 git reset --hard origin/main 🌿 分支与远程 操作 命令 查看本地和远程分支 git branch -a 建立本地分支并追踪远程分支 git checkout -b dev origin/dev 修改本地分支追踪的远程分支 git branch --set-upstream-to=origin/dev 删除远程分支 git push origin --delete branch_name 🏷️ 标签与远程 操作 命令 新建标签 git tag v1.0.0 查看所有标签 git tag 推送标签到远程 git push origin v1.0.0 删除远程标签 git push origin :refs/tags/v1.0.0 ✅ 小贴士 推荐 SSH 地址（git@github.com:xxx.git），避免频繁输入密码。\n第一次推送用 -u（--set-upstream），后面就可以简化为 git push / git pull。\n用 git fetch 比 git pull 安全，避免意外合并。\n","wordCount":"453","inLanguage":"zh","datePublished":"2025-09-17T00:00:00Z","dateModified":"2025-09-17T10:17:14+08:00","author":{"@type":"Person","name":"hansel"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jhxs.github.io/posts/20250917t101714/"},"publisher":{"@type":"Organization","name":"hansel 的垃圾站","logo":{"@type":"ImageObject","url":"https://jhxs.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://jhxs.github.io/ accesskey=h title="hansel 的垃圾站 (Alt + H)">hansel 的垃圾站</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://jhxs.github.io/posts title=📚文章><span>📚文章</span></a></li><li><a href=https://jhxs.github.io/journal title=✍日记><span>✍日记</span></a></li><li><a href=https://jhxs.github.io/archives title=⏱时间轴><span>⏱时间轴</span></a></li><li><a href=https://jhxs.github.io/tags title=🏷️标签><span>🏷️标签</span></a></li><li><a href=https://jhxs.github.io/search/ title=🔍搜索><span>🔍搜索</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://jhxs.github.io/>主页</a>&nbsp;»&nbsp;<a href=https://jhxs.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">📝 Git 本地 ↔ 远程管理速查表</h1><div class=post-meta><span title=创建于：2025年09月17日>创建于：2025年09月17日</span>&nbsp;·&nbsp;<span title=最后更新于：2025年09月17日>最后更新于：2025年09月17日</span>&nbsp;·&nbsp;453 字&nbsp;·&nbsp;hansel</div></header><aside id=toc-container class="toc-container wide"><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>目录</span></summary><div class=inner><ul><li><a href=#-%e8%bf%9c%e7%a8%8b%e4%bb%93%e5%ba%93%e7%ae%a1%e7%90%86 aria-label="🔗 远程仓库管理">🔗 远程仓库管理</a></li><li><a href=#-%e6%8e%a8%e9%80%81%e5%88%b0%e8%bf%9c%e7%a8%8b aria-label="🚀 推送到远程">🚀 推送到远程</a></li><li><a href=#-%e4%bb%8e%e8%bf%9c%e7%a8%8b%e8%8e%b7%e5%8f%96%e6%9b%b4%e6%96%b0 aria-label="⬇️ 从远程获取更新">⬇️ 从远程获取更新</a></li><li><a href=#-%e5%88%86%e6%94%af%e4%b8%8e%e8%bf%9c%e7%a8%8b aria-label="🌿 分支与远程">🌿 分支与远程</a></li><li><a href=#-%e6%a0%87%e7%ad%be%e4%b8%8e%e8%bf%9c%e7%a8%8b aria-label="🏷️ 标签与远程">🏷️ 标签与远程</a></li><li><a href=#-%e5%b0%8f%e8%b4%b4%e5%a3%ab aria-label="✅ 小贴士">✅ 小贴士</a></li></ul></div></details></div></aside><script>let activeElement,elements;document.addEventListener("DOMContentLoaded",function(){if(checkTocPosition(),elements=document.querySelectorAll("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]"),elements.length>0){activeElement=elements[0];const e=encodeURI(activeElement.getAttribute("id")).toLowerCase();document.querySelector(`.inner ul li a[href="#${e}"]`).classList.add("active")}const t=document.getElementById("top-link");t&&t.addEventListener("click",e=>{e.preventDefault(),window.scrollTo({top:0,behavior:"smooth"})})},!1),window.addEventListener("resize",function(){checkTocPosition()},!1),window.addEventListener("scroll",()=>{const e=window.pageYOffset||document.documentElement.scrollTop;if(e===0)return;elements&&elements.length>0&&(activeElement=Array.from(elements).find(t=>{if(getOffsetTop(t)-e>0&&getOffsetTop(t)-e<window.innerHeight/2)return t})||activeElement,elements.forEach(e=>{const n=encodeURI(e.getAttribute("id")).toLowerCase(),t=document.querySelector(`.inner ul li a[href="#${n}"]`);if(e===activeElement){t.classList.add("active");const e=document.querySelector(".toc .inner"),n=t.offsetTop,s=e.clientHeight,o=t.clientHeight,i=n-s/2+o/2;e.scrollTo({top:i,behavior:"smooth"})}else t.classList.remove("active")}))},!1);const main=parseInt(getComputedStyle(document.body).getPropertyValue("--article-width"),10),toc=parseInt(getComputedStyle(document.body).getPropertyValue("--toc-width"),10),gap=parseInt(getComputedStyle(document.body).getPropertyValue("--gap"),10);function checkTocPosition(){const e=document.body.scrollWidth;e-main-toc*2-gap*4>0?document.getElementById("toc-container").classList.add("wide"):document.getElementById("toc-container").classList.remove("wide")}function getOffsetTop(e){if(!e.getClientRects().length)return 0;let t=e.getBoundingClientRect(),n=e.ownerDocument.defaultView;return t.top+n.pageYOffset}</script><div class=post-content><h1 id=-远程仓库管理>🔗 远程仓库管理<a hidden class=anchor aria-hidden=true href=#-远程仓库管理>#</a></h1><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>添加远程仓库</td><td><code>git remote add origin &lt;远程地址></code></td></tr><tr><td>查看远程仓库</td><td><code>git remote -v</code></td></tr><tr><td>修改远程仓库地址</td><td><code>git remote set-url origin &lt;新地址></code></td></tr><tr><td>删除远程仓库</td><td><code>git remote remove origin</code></td></tr><tr><td>重命名远程仓库</td><td><code>git remote rename origin upstream</code></td></tr></tbody></table><h1 id=-推送到远程>🚀 推送到远程<a hidden class=anchor aria-hidden=true href=#-推送到远程>#</a></h1><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>首次推送本地分支到远程（并建立追踪关系）</td><td><code>git push -u origin main</code></td></tr><tr><td>推送当前分支</td><td><code>git push</code></td></tr><tr><td>推送指定分支</td><td><code>git push origin branch_name</code></td></tr><tr><td>推送所有分支</td><td><code>git push --all origin</code></td></tr><tr><td>推送标签</td><td><code>git push origin &lt;tagname></code></td></tr><tr><td>推送所有标签</td><td><code>git push --tags</code></td></tr></tbody></table><h1 id=-从远程获取更新>⬇️ 从远程获取更新<a hidden class=anchor aria-hidden=true href=#-从远程获取更新>#</a></h1><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>获取远程分支信息（不合并）</td><td><code>git fetch origin</code></td></tr><tr><td>拉取远程分支并合并到当前分支</td><td><code>git pull origin main</code></td></tr><tr><td>拉取并重置为远程分支（强制覆盖）</td><td><code>git fetch origin && git reset --hard origin/main</code></td></tr></tbody></table><h1 id=-分支与远程>🌿 分支与远程<a hidden class=anchor aria-hidden=true href=#-分支与远程>#</a></h1><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>查看本地和远程分支</td><td><code>git branch -a</code></td></tr><tr><td>建立本地分支并追踪远程分支</td><td><code>git checkout -b dev origin/dev</code></td></tr><tr><td>修改本地分支追踪的远程分支</td><td><code>git branch --set-upstream-to=origin/dev</code></td></tr><tr><td>删除远程分支</td><td><code>git push origin --delete branch_name</code></td></tr></tbody></table><h1 id=-标签与远程>🏷️ 标签与远程<a hidden class=anchor aria-hidden=true href=#-标签与远程>#</a></h1><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>新建标签</td><td><code>git tag v1.0.0</code></td></tr><tr><td>查看所有标签</td><td><code>git tag</code></td></tr><tr><td>推送标签到远程</td><td><code>git push origin v1.0.0</code></td></tr><tr><td>删除远程标签</td><td><code>git push origin :refs/tags/v1.0.0</code></td></tr></tbody></table><h1 id=-小贴士>✅ 小贴士<a hidden class=anchor aria-hidden=true href=#-小贴士>#</a></h1><ul><li><p>推荐 <strong>SSH 地址</strong>（<code>git@github.com:xxx.git</code>），避免频繁输入密码。</p></li><li><p>第一次推送用 <code>-u</code>（<code>--set-upstream</code>），后面就可以简化为 <code>git push / git pull</code>。</p></li><li><p>用 <code>git fetch</code> 比 <code>git pull</code> 安全，避免意外合并。</p></li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://jhxs.github.io/tags/utility/>Utility</a></li><li><a href=https://jhxs.github.io/tags/%E8%BD%AF%E4%BB%B6%E8%AE%B0%E5%BD%95/>软件记录</a></li><li><a href=https://jhxs.github.io/tags/git/>Git</a></li></ul><nav class=paginav><a class=next href=https://jhxs.github.io/posts/20250917t095410/><span class=title>下一页 »</span><br><span>Hugo-PaperMod主题配置</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://jhxs.github.io/>hansel 的垃圾站</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><span class=topInner><svg class="topSvg" viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+<span id=read_progress></span>
+</span></a><script>document.addEventListener("scroll",function(){const t=document.getElementById("read_progress"),n=document.documentElement.scrollHeight,s=document.documentElement.clientHeight,o=document.documentElement.scrollTop||document.body.scrollTop;t.innerText=((o/(n-s)).toFixed(2)*100).toFixed(0)})</script><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="复制";function s(){t.innerHTML="已复制！",setTimeout(()=>{t.innerHTML="复制"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
