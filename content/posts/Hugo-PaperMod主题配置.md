@@ -1,13 +1,13 @@
 ---
 title: Hugo-PaperMod主题配置
 date: 2025-09-17
-lastmod: 2025-09-17T09:50:50+08:00
+lastmod: 2025-09-17T09:54:10+08:00
 tags:
   - blog
   - hugo
   - hugo-thems
   - PaperMod
-slug: 2025-09-17T09-50-50
+slug: 20250917T095410
 share: true
 series: Hugo
 author: hansel
