@@ -4,9 +4,9 @@ tags:
   - blog
   - hugo
 title: 使用 Hugo 搭建博客
-date: 2025-09-16
-lastmod: 2025-09-16T20:57:08+08:00
-slug: 19:51
+date: 2025-09-17
+lastmod: 2025-09-17T09:51:12+08:00
+slug: 2025-09-17T09-51-12
 share: true
 description: 学习使用hugo搭建个人博客
 series: Hugo
@@ -265,7 +265,7 @@ title: "{{title}}"
 date: "{{date}}"
 lastmod: "{{date:YYYY-MM-DDTHH:mm:ss+08:00}}"
 tags:
-slug: "{{time}}"
+slug: "{{date}}-{{time}}"
 author: hansel
 share: true
 series:
